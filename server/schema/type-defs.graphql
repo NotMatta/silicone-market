@@ -1,0 +1,24 @@
+enum category{
+    cpu
+    gpu
+    ram
+    motherboard
+    storage
+    psu
+    case
+}
+
+type Product{
+    id: ID!
+    image: String!
+    title: String!
+    price: Float!
+    description: String!
+    category: category!
+}
+
+type Query{
+    product(id: ID!): Product
+    listProducts(keys:[String],range:[Int]): [Product]
+}
+
