@@ -18,7 +18,9 @@ type Product{
 }
 
 type Query{
+    verifyConnection: String
     product(id: ID!): Product
     listProducts(keys:[String],range:[Int]): [Product]
+    listCartProducts(ids:[ID]): [Product]
 }
 

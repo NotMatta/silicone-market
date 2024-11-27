@@ -3,6 +3,10 @@ const { prisma } = require("../prisma/prisma-client")
 
 const resolvers = {
     Query: {
+        verifyConnection: () => {
+            console.log("a client connected!")
+            return "Connected"
+        },
         product: async (_parent,{id}) => {
             const res = await prisma.product.findUnique({where: {id: Number(id)}})
             return res
@@ -18,6 +22,11 @@ const resolvers = {
                     ]
                 }
             })
+            return res
+        },
+        listCartProducts: async (_parent,{ids}) => {
+            const nIds = ids.map(id => Number(id))
+            const res = await prisma.product.findMany({where: {id: {in: nIds}}})
             return res
         }
     }
