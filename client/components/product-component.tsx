@@ -19,7 +19,7 @@ const Product = ({id}:{id:number | string}) => {
         } 
     `
     const {loading,error,data} = useQuery(GET_PRODUCTS);
-    const [count,setCount] = useState(0)
+    const [count,setCount] = useState(1)
     const {addItem} = useCart();
 
     useEffect(() => {
@@ -45,7 +45,7 @@ const Product = ({id}:{id:number | string}) => {
                     <p className="font-bold text-xl">Price: {data.product.price}$</p>
                     <p>
                         <Label className='font-bold' htmlFor="q">Quantity</Label>
-                        <Input id="q" type="number" value={count} onChange={(e) => setCount(Number(e.target.value))} min={1} max={10} defaultValue={1}/>
+                        <Input id="q" type="number" value={String(count)} onChange={(e) => setCount(Number(e.target.value))} min={1} max={10}/>
                     </p>
                     <Button onClick={() => {
                         addItem({

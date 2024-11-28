@@ -12,6 +12,7 @@ const CartProvider = ({children}:{children:React.ReactNode}) => {
         }
         setItems((prevItems) => [...prevItems, item])
     }
+    const editQuantity = (id: string, quantity: number) => setItems((prevItems) => prevItems.map((i) => i.id === id ? {...i, quantity} : i));
     const removeItem = (id: string) => setItems((prevItems) => prevItems.filter((item) => item.id !== id));
     const clearCart = () => setItems([]);
 
@@ -29,7 +30,7 @@ const CartProvider = ({children}:{children:React.ReactNode}) => {
     }, [items,load])
     
     return (
-        <cartContext.Provider value={{ items, addItem, removeItem, clearCart }}>
+        <cartContext.Provider value={{ items, addItem, removeItem, clearCart, editQuantity }}>
             {children}
         </cartContext.Provider>
     );
