@@ -1,19 +1,17 @@
 # Silicone Market
-A simple e-commerce website (about pc components) that uses Next.js in the front end (it makes routing easier don't judge me) and apollo in the backend for GraphQL.
+This is a prototype e-commerce website for PC components built with Next.js (smooth navigation, SEO), TailwindCSS (rapid styling), and Prisma.io (database interaction). It uses Apollo and GraphQL for a flexible API layer, allowing users to browse a curated selection of components or explore pre-built configurations.
 
-## Goal:
-I just wanted to learn how graphql works and how to set it up, I was going to integrate stripe but then I realized it's useless.
+**Tech Stack:**
 
-## Tech I used:
-- Next.js
-- TailwindCSS
-- Shadcn/ui
-- Prisma.io (easier db management)
-- Apollo
-- Graphql
+*   **Next.js:** Frontend framework
+*   **TailwindCSS:** Utility-first CSS framework
+*   **Shadcn/ui (Optional):** UI component library
+*   **Prisma.io:** Object-Relational Mapper
+*   **Apollo/GraphQL:** API layer with flexible data fetching
 
-## Where is the demo?
-Bro I'm broke (pls hire me)
+**(Learning Project/Future Product)**
 
-## Peace
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaGiNkWC90w7lYsx8_JCFUkbhIRI0JqhoQSFQhy7f4Kc6c5n-0-mrlSLVWILyw5kSj36ySRv37FketPG7Q1vfLUwON_wG2RJE7CayhtF56L2YS2Qg6EKokiN1eukbOfOZxIj6JEE8rT24s/s320/funny-cat-in-computer-picture.jpg)
+**Important Notes:**
+
+*   This project does not have a live demo.
+*   To run this project locally, you will need to set up a database and configure the database URL in the `.env` file.
